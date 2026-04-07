@@ -1,12 +1,10 @@
 name: Test Suites
-description: A collection of organized test cases designed to validate specific functionality
-  or features of software applications. It is widely used by developers to build,
-  maintain, and scale software applications efficiently.
+description: A collection of organized test cases designed to validate specific functionality or features of software applications. It is widely used by developers to build, maintain, and scale software applications efficiently.
 url: https://en.wikipedia.org/wiki/Test_suite
 tags:
-- Testing
-- Quality Assurance
-- Software Development
+  - Quality Assurance
+  - Software Development
+  - Testing
 created: '2025'
 modified: '2026-03-16'
 apis: []
