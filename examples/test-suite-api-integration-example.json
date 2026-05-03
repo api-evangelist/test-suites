@@ -1,0 +1,60 @@
+{
+  "id": "suite-payments-api-integration-v1",
+  "name": "Payments API Integration Test Suite",
+  "description": "Integration test suite for the Payments API covering all endpoints across authentication, payment processing, and refund workflows.",
+  "framework": "Postman",
+  "language": "JavaScript",
+  "suiteType": "integration",
+  "testCases": [
+    {
+      "id": "tc-auth-token",
+      "name": "Obtain OAuth Token",
+      "description": "POST /oauth/token returns access token for test client credentials.",
+      "status": "pass",
+      "duration": 120,
+      "tags": ["Authentication", "OAuth"]
+    },
+    {
+      "id": "tc-create-payment",
+      "name": "Create Payment - Success",
+      "description": "POST /payments with valid payload returns 201 and payment ID.",
+      "status": "pass",
+      "duration": 250,
+      "tags": ["Payments", "Create", "Happy Path"]
+    },
+    {
+      "id": "tc-get-payment",
+      "name": "Get Payment - Success",
+      "description": "GET /payments/{id} returns full payment object with correct status.",
+      "status": "pass",
+      "duration": 85,
+      "tags": ["Payments", "Read"]
+    },
+    {
+      "id": "tc-refund-payment",
+      "name": "Refund Payment - Success",
+      "description": "POST /payments/{id}/refunds returns 200 with refund details.",
+      "status": "pass",
+      "duration": 310,
+      "tags": ["Payments", "Refunds"]
+    },
+    {
+      "id": "tc-payment-not-found",
+      "name": "Get Payment - Not Found",
+      "description": "GET /payments/{invalid-id} returns 404 with error body.",
+      "status": "pass",
+      "duration": 70,
+      "tags": ["Payments", "Error Handling"]
+    }
+  ],
+  "coverage": {
+    "lines": 92.5,
+    "branches": 88.0,
+    "functions": 95.0,
+    "statements": 92.5
+  },
+  "executionTime": 835,
+  "tags": ["Payments", "Integration Testing", "Postman"],
+  "created": "2026-05-03",
+  "modified": "2026-05-03"
+}

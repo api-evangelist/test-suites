@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-suites/main/json-schema/test-suites-schema.json",
+  "title": "Test Suite",
+  "description": "Schema representing a test suite — a collection of organized test cases designed to validate specific functionality of software applications and APIs.",
+  "type": "object",
+  "required": ["id", "name", "framework"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the test suite."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the test suite."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of what the test suite validates."
+    },
+    "framework": {
+      "type": "string",
+      "description": "Testing framework organizing this suite (e.g., JUnit 5, pytest, Jest, Postman)."
+    },
+    "language": {
+      "type": "string",
+      "description": "Programming language of the test suite."
+    },
+    "suiteType": {
+      "type": "string",
+      "enum": ["unit", "integration", "end-to-end", "contract", "performance", "smoke", "regression", "security"],
+      "description": "Category of tests grouped in this suite."
+    },
+    "testCases": {
+      "type": "array",
+      "description": "Individual test cases grouped in this suite.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["pass", "fail", "skip", "pending"],
+            "description": "Last execution status of this test case."
+          },
+          "duration": {
+            "type": "number",
+            "description": "Execution duration in milliseconds."
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "subSuites": {
+      "type": "array",
+      "description": "Nested test suites (hierarchical suite composition).",
+      "items": {
+        "$ref": "#"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Test coverage metrics for this suite.",
+      "properties": {
+        "lines": { "type": "number", "description": "Line coverage percentage." },
+        "branches": { "type": "number", "description": "Branch coverage percentage." },
+        "functions": { "type": "number", "description": "Function coverage percentage." },
+        "statements": { "type": "number", "description": "Statement coverage percentage." }
+      }
+    },
+    "executionTime": {
+      "type": "number",
+      "description": "Total suite execution duration in milliseconds."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "created": { "type": "string", "format": "date" },
+    "modified": { "type": "string", "format": "date" }
+  }
+}

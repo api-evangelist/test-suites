@@ -1,0 +1,120 @@
+name: Test Suites Vocabulary
+description: >-
+  Vocabulary of terms, concepts, and classifications used in the domain of
+  API and software test suite organization, management, and execution.
+url: https://github.com/api-evangelist/test-suites
+tags:
+  - Collections
+  - Quality Assurance
+  - Testing
+created: '2026-05-03'
+modified: '2026-05-03'
+
+terms:
+  - term: Test Suite
+    definition: >-
+      A collection of related test cases grouped to validate a specific feature,
+      component, or behavioral domain of software or an API. Test suites provide
+      organizational structure for running cohesive sets of tests together, producing
+      collective pass/fail results and coverage metrics.
+    tags:
+      - Core Concept
+
+  - term: Test Case
+    definition: >-
+      A single, atomic test that validates one scenario or behavior. Test cases within
+      a test suite share execution context (fixtures, setup/teardown) and collectively
+      contribute to the suite's coverage report.
+    tags:
+      - Core Concept
+
+  - term: Test Runner
+    definition: >-
+      The executable process responsible for discovering, loading, and running test
+      suites. Test runners collect results, compute coverage, and produce reports
+      in formats such as JUnit XML, TAP, or HTML.
+    tags:
+      - Tooling
+
+  - term: Fixture
+    definition: >-
+      Shared test state or data configured before a test suite executes. Fixtures
+      include database seeds, mock server initialization, authentication tokens,
+      and environment configuration that test cases within a suite depend on.
+    tags:
+      - Testing
+
+  - term: Suite Composition
+    definition: >-
+      The hierarchical organization of test suites into parent suites containing
+      sub-suites. Suite composition enables fine-grained execution (run only smoke
+      tests), parallel execution (split regression suite into shards), and reuse
+      of common fixture logic across related suites.
+    tags:
+      - Architecture
+
+  - term: Test Coverage
+    definition: >-
+      A metric indicating what percentage of source code lines, branches, functions,
+      or API operations are exercised by a test suite. Coverage reports identify
+      gaps and guide test case authoring to improve quality assurance completeness.
+    tags:
+      - Quality Assurance
+
+  - term: Smoke Suite
+    definition: >-
+      A minimal test suite run immediately after deployment to verify core API
+      endpoints are functional. Smoke suites execute quickly and provide rapid
+      confidence in a deployment before broader regression testing begins.
+    tags:
+      - Testing
+
+  - term: Regression Suite
+    definition: >-
+      A comprehensive test suite re-run after code changes to verify that previously
+      passing scenarios remain unbroken. Regression suites are the primary safety
+      net for continuous delivery pipelines.
+    tags:
+      - Testing
+
+  - term: Integration Suite
+    definition: >-
+      A test suite that exercises interactions between multiple API endpoints or
+      services. Integration suites validate workflows that span authentication,
+      data creation, retrieval, and cleanup across real service dependencies.
+    tags:
+      - Testing
+
+  - term: Contract Suite
+    definition: >-
+      A test suite organized around verifying that an API implementation satisfies
+      its published specification (OpenAPI, AsyncAPI, or Pact). Contract suites
+      generate one test case per documented operation, asserting response schema
+      conformance.
+    tags:
+      - Contract Testing
+
+  - term: Parallel Execution
+    definition: >-
+      The ability to run multiple test suites or test cases concurrently across
+      multiple workers or machines, reducing total pipeline execution time. Frameworks
+      such as Jest, pytest-xdist, and JUnit Parallel all support suite-level parallelism.
+    tags:
+      - Performance
+
+  - term: Setup and Teardown
+    definition: >-
+      Lifecycle hooks that execute before (setup) and after (teardown) a test suite
+      or individual test case. Setup creates necessary state (authenticate, seed data)
+      while teardown cleans up (delete created resources) to prevent test contamination.
+    tags:
+      - Testing
+
+  - term: Test Report
+    definition: >-
+      A structured output document produced after a test suite executes, listing
+      test case results (pass/fail/skip), execution times, error messages, and
+      summary statistics. JUnit XML is the most widely supported test report format
+      for CI/CD integrations.
+    tags:
+      - Reporting

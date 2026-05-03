@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ts": "https://raw.githubusercontent.com/api-evangelist/test-suites/main/vocabulary/test-suites-vocabulary.yml#",
+
+    "TestSuite": { "@id": "ts:TestSuite", "@type": "@id" },
+    "TestCase": { "@id": "ts:TestCase", "@type": "@id" },
+    "CoverageReport": { "@id": "ts:CoverageReport", "@type": "@id" },
+
+    "id": "@id",
+    "name": "schema:name",
+    "description": "schema:description",
+    "created": { "@id": "schema:dateCreated", "@type": "xsd:date" },
+    "modified": { "@id": "schema:dateModified", "@type": "xsd:date" },
+    "tags": "schema:keywords",
+
+    "framework": "ts:framework",
+    "language": "schema:programmingLanguage",
+    "suiteType": "ts:suiteType",
+    "testCases": { "@id": "ts:testCases", "@container": "@set" },
+    "subSuites": { "@id": "ts:subSuites", "@container": "@set" },
+    "coverage": { "@id": "ts:coverage", "@type": "@id" },
+    "executionTime": "ts:executionTime",
+
+    "status": "ts:executionStatus",
+    "duration": "ts:executionDuration",
+
+    "lines": "ts:lineCoverage",
+    "branches": "ts:branchCoverage",
+    "functions": "ts:functionCoverage",
+    "statements": "ts:statementCoverage"
+  }
+}
