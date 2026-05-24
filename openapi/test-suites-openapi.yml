@@ -1,0 +1,107 @@
+openapi: 3.1.0
+info:
+  title: Postman Collections API (Test Suites)
+  description: >-
+    Subset of the Postman API used to manage Postman Collections, which act as
+    organizational test suites that group related API test cases. Base URL
+    https://api.getpostman.com, authenticated with the X-Api-Key header.
+  version: "v1"
+  contact:
+    name: Postman API
+    url: https://learning.postman.com/docs/collections/collections-overview/
+servers:
+  - url: https://api.getpostman.com
+security:
+  - apiKey: []
+paths:
+  /collections:
+    get:
+      summary: List collections (test suites)
+      operationId: listCollections
+      responses:
+        '200':
+          description: Collections listed.
+    post:
+      summary: Create a collection
+      operationId: createCollection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                collection:
+                  type: object
+      responses:
+        '200':
+          description: Collection created.
+  /collections/{collection_uid}:
+    get:
+      summary: Get a collection
+      operationId: getCollection
+      parameters:
+        - name: collection_uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Collection returned.
+    put:
+      summary: Update a collection
+      operationId: updateCollection
+      parameters:
+        - name: collection_uid
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Collection updated.
+    delete:
+      summary: Delete a collection
+      operationId: deleteCollection
+      parameters:
+        - name: collection_uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Collection deleted.
+  /workspaces:
+    get:
+      summary: List workspaces containing collections
+      operationId: listWorkspaces
+      responses:
+        '200':
+          description: Workspaces listed.
+  /workspaces/{workspace_id}:
+    get:
+      summary: Get a workspace
+      operationId: getWorkspace
+      parameters:
+        - name: workspace_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Workspace returned.
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
