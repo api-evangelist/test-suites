@@ -1,0 +1,131 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Postman Collections API (Test Suites)",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Api-Key",
+      "value": "{{X-Api-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List collections (test suites)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/collections"
+      },
+      "docs": "List collections (test suites)"
+    },
+    {
+      "info": {
+        "name": "Create a collection",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.getpostman.com/collections",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a collection"
+    },
+    {
+      "info": {
+        "name": "Get a collection",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/collections/:collection_uid",
+        "params": [
+          {
+            "name": "collection_uid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a collection"
+    },
+    {
+      "info": {
+        "name": "Update a collection",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.getpostman.com/collections/:collection_uid",
+        "params": [
+          {
+            "name": "collection_uid",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update a collection"
+    },
+    {
+      "info": {
+        "name": "Delete a collection",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.getpostman.com/collections/:collection_uid",
+        "params": [
+          {
+            "name": "collection_uid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a collection"
+    },
+    {
+      "info": {
+        "name": "List workspaces containing collections",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/workspaces"
+      },
+      "docs": "List workspaces containing collections"
+    },
+    {
+      "info": {
+        "name": "Get a workspace",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/workspaces/:workspace_id",
+        "params": [
+          {
+            "name": "workspace_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a workspace"
+    }
+  ],
+  "bundled": true
+}
