@@ -188,6 +188,14 @@ apis:
         url: https://github.com/testng-team/testng
 
 common:
+  - type: TrustCenter
+    url: security/test-suites-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/test-suites-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/test-suites-domain-security.yml
+  - type: Authentication
+    url: authentication/test-suites-authentication.yml
   - type: GitHubOrg
     url: https://github.com/api-evangelist/test-suites
   - type: JSONSchema
