@@ -188,6 +188,8 @@ apis:
         url: https://github.com/testng-team/testng
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/test-suites-agentic-access.yml
   - type: TrustCenter
     url: security/test-suites-trust-center.yml
   - type: VulnerabilityDisclosure
