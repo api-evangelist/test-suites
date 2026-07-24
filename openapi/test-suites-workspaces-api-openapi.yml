@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Postman API (Test Suites) Collections Workspaces API
+  description: Subset of the Postman API used to manage Postman Collections, which act as organizational test suites that group related API test cases. Base URL https://api.getpostman.com, authenticated with the X-Api-Key header.
+  version: v1
+  contact:
+    name: Postman API
+    url: https://learning.postman.com/docs/collections/collections-overview/
+servers:
+- url: https://api.getpostman.com
+security:
+- apiKey: []
+tags:
+- name: Workspaces
+paths:
+  /workspaces:
+    get:
+      summary: List workspaces containing collections
+      operationId: listWorkspaces
+      responses:
+        '200':
+          description: Workspaces listed.
+      tags:
+      - Workspaces
+  /workspaces/{workspace_id}:
+    get:
+      summary: Get a workspace
+      operationId: getWorkspace
+      parameters:
+      - name: workspace_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Workspace returned.
+      tags:
+      - Workspaces
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key

@@ -1,18 +1,17 @@
 openapi: 3.1.0
 info:
-  title: Postman Collections API (Test Suites)
-  description: >-
-    Subset of the Postman API used to manage Postman Collections, which act as
-    organizational test suites that group related API test cases. Base URL
-    https://api.getpostman.com, authenticated with the X-Api-Key header.
-  version: "v1"
+  title: Postman API (Test Suites) Collections API
+  description: Subset of the Postman API used to manage Postman Collections, which act as organizational test suites that group related API test cases. Base URL https://api.getpostman.com, authenticated with the X-Api-Key header.
+  version: v1
   contact:
     name: Postman API
     url: https://learning.postman.com/docs/collections/collections-overview/
 servers:
-  - url: https://api.getpostman.com
+- url: https://api.getpostman.com
 security:
-  - apiKey: []
+- apiKey: []
+tags:
+- name: Collections
 paths:
   /collections:
     get:
@@ -21,6 +20,8 @@ paths:
       responses:
         '200':
           description: Collections listed.
+      tags:
+      - Collections
     post:
       summary: Create a collection
       operationId: createCollection
@@ -36,28 +37,32 @@ paths:
       responses:
         '200':
           description: Collection created.
+      tags:
+      - Collections
   /collections/{collection_uid}:
     get:
       summary: Get a collection
       operationId: getCollection
       parameters:
-        - name: collection_uid
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: collection_uid
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Collection returned.
+      tags:
+      - Collections
     put:
       summary: Update a collection
       operationId: updateCollection
       parameters:
-        - name: collection_uid
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: collection_uid
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -67,38 +72,22 @@ paths:
       responses:
         '200':
           description: Collection updated.
+      tags:
+      - Collections
     delete:
       summary: Delete a collection
       operationId: deleteCollection
       parameters:
-        - name: collection_uid
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: collection_uid
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Collection deleted.
-  /workspaces:
-    get:
-      summary: List workspaces containing collections
-      operationId: listWorkspaces
-      responses:
-        '200':
-          description: Workspaces listed.
-  /workspaces/{workspace_id}:
-    get:
-      summary: Get a workspace
-      operationId: getWorkspace
-      parameters:
-        - name: workspace_id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Workspace returned.
+      tags:
+      - Collections
 components:
   securitySchemes:
     apiKey:
