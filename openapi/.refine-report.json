@@ -1,0 +1,16 @@
+{
+  "provider": "test-suites",
+  "sources": [
+    "test-suites-collections-api-openapi.yml",
+    "test-suites-workspaces-api-openapi.yml"
+  ],
+  "outputs": [
+    "test-suites-collections-api-openapi.yml",
+    "test-suites-workspaces-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
