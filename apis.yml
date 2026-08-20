@@ -26,6 +26,13 @@ description: >-
 url: https://en.wikipedia.org/wiki/Test_suite
 tags:
   - API Testing
+  - Collection
+  - Quality Assurance
+  - Software Development
+  - Test Management
+  - Testing
+tags_raw:
+  - API Testing
   - Collections
   - Quality Assurance
   - Software Development
@@ -129,6 +136,10 @@ apis:
   baseURL: https://www.usebruno.com/
   tags:
   - API Testing
+  - Collection
+  - Open-Source
+  tags_raw:
+  - API Testing
   - Collections
   - Open Source
   properties:
@@ -176,6 +187,8 @@ apis:
   humanURL: https://www.postman.com/
   baseURL: https://api.getpostman.com
   tags:
+  - Collection
+  tags_raw:
   - Collections
   properties:
   - type: OpenAPI
