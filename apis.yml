@@ -218,6 +218,8 @@ apis:
   humanURL: https://www.postman.com/
   baseURL: https://api.getpostman.com
   tags:
+  - Workspace
+  tags_raw:
   - Workspaces
   properties:
   - type: OpenAPI
