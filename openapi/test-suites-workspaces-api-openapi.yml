@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Postman API (Test Suites) Collections Workspaces API
+  title: Postman Collections API (Test Suites) Workspaces API
   description: Subset of the Postman API used to manage Postman Collections, which act as organizational test suites that group related API test cases. Base URL https://api.getpostman.com, authenticated with the X-Api-Key header.
   version: v1
   contact:

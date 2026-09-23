@@ -1,8 +1,7 @@
 {
   "provider": "test-suites",
   "sources": [
-    "test-suites-collections-api-openapi.yml",
-    "test-suites-workspaces-api-openapi.yml"
+    "_original/test-suites-openapi.yml"
   ],
   "outputs": [
     "test-suites-collections-api-openapi.yml",
@@ -12,9 +11,21 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "test-suites-collections-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "test-suites-workspaces-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "test-suites-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "test-suites-openapi.yml: tagged paths GET /collections -> Collections",
+    "test-suites-openapi.yml: tagged paths POST /collections -> Collections",
+    "test-suites-openapi.yml: tagged paths GET /collections/{collection_uid} -> Collections",
+    "test-suites-openapi.yml: tagged paths PUT /collections/{collection_uid} -> Collections",
+    "test-suites-openapi.yml: tagged paths DELETE /collections/{collection_uid} -> Collections",
+    "test-suites-openapi.yml: tagged paths GET /workspaces -> Workspaces",
+    "test-suites-openapi.yml: tagged paths GET /workspaces/{workspace_id} -> Workspaces",
+    "test-suites-openapi.yml: declared missing tag: Collections",
+    "test-suites-openapi.yml: declared missing tag: Workspaces",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "test-suites-collections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "test-suites-workspaces-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
