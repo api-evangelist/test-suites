@@ -229,6 +229,9 @@ apis:
   - type: Documentation
     url: https://learning.postman.com/docs/collections/collections-overview/
 common:
+  - type: CapabilityMap
+    url: capabilities/test-suites-capability-edges.yml
+    name: Test Suites Business Capability Map
   - type: AgenticAccess
     url: agentic-access/test-suites-agentic-access.yml
   - type: TrustCenter
