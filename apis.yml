@@ -229,6 +229,12 @@ apis:
   - type: Documentation
     url: https://learning.postman.com/docs/collections/collections-overview/
 common:
+  - type: Plans
+    url: plans/test-suites-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/test-suites-rate-limits.yml
+  - type: FinOps
+    url: finops/test-suites-finops.yml
   - type: CapabilityMap
     url: capabilities/test-suites-capability-edges.yml
     name: Test Suites Business Capability Map
